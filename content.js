@@ -1,11 +1,8 @@
 
 function getVideoTitle() {
-    // Only return titles matching the pattern: optional (nnn) at start, then title, then ' - YouTube'
-    // Example: (3) My Video Title - YouTube  OR  My Video Title - YouTube
     const match = document.title.match(/^\s*(\(\d+\)\s*)?(.+?)\s+-\s+YouTube\s*$/);
     if (match) {
         const title = match[2].trim();
-        // console.log('[YTPAR content.js] getVideoTitle: matched title:', title);
         return title;
     } else {
         console.log('[YTPAR content.js] getVideoTitle: no match for document.title:', document.title);
