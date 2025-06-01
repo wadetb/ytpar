@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "YTPAR",
+    "version": "0.1",
+    "description": "Monitor activity and notify an endpoint",
+    "permissions": [
+        "storage",
+        "https://*/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.youtube.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "options_page": "options.html",
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "ytpar@wadeb.com"
+        }
+    }
+}
